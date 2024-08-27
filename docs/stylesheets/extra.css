@@ -1,0 +1,132 @@
+:root > * {
+  /* Page background */
+  --md-default-bg-color: #1f1345;
+  --md-default-fg-color: #b7a7e2;
+  --md-default-fg-color--lightest: #150c30; /* Metadata background in search popup */
+
+  /* Accents */
+  --md-accent-fg-color: #ffba00; /* Brand color */
+  --md-accent-bg-color: #19103b;
+  --md-accent-fg-color--transparent: #2e1b66; /* Selected items in search popup */
+
+  /* Title bar */
+  --md-primary-fg-color: #4a2c94; /* Background */
+  --md-primary-bg-color: #ffffff; /* Text */
+  --md-primary-fg-color--dark: #2e1b66; /* ??? */
+  --md-primary-bg-color--light: #8a73cc;
+
+  /* Body */
+  --md-typeset-color: var(--md-default-fg-color); /* Regular text */
+  --md-typeset-a-color: var(--md-accent-fg-color); /* Links */
+  --md-typeset-mark-color: #4a2c94; /* HTML <mark> tags */
+
+  /* Code blocks */
+  --md-code-bg-color: #100925;
+  --md-code-fg-color: #8a73cc;
+  --md-code-hl-comment-color:  #48357d;
+  --md-code-hl-string-color: #db77b6;
+  --md-code-hl-keyword-color: #3a73c3;
+  --md-code-hl-function-color: #8946b9;
+  --md-code-hl-operator-color: #c77c31;
+  --md-code-hl-punctuation-color: #c77c31;
+  --md-code-hl-number-color: #ca3f3f;
+  --md-code-hl-special-color: #b69df9;
+
+  /* Footer */
+  --md-footer-bg-color: #160d31; /* Background for top part */
+  --md-footer-bg-color--dark: #100925; /* Background for bottom part */
+  --md-footer-fg-color: #d9d1ef; /* Previous and Next buttons text */
+  --md-footer-fg-color--light: #8a73cc; /* Links */
+  --md-footer-fg-color--lighter: #584394; /* Regular text */
+
+  /* ??? */
+  /* --md-default-fg-color: #b7a7e2; */
+  --md-default-fg-color--light: #8a73cc; /* Blockquotes */
+  --md-default-fg-color--lighter: #584394; /* Blockquotes border */
+
+  /* Keyboard shortcuts */
+  --md-typeset-kbd-color: #876dd4;
+  --md-typeset-kbd-accent-color: #6d50c6;
+  --md-typeset-kbd-border-color: #4a2c94;
+
+  /* Tables */
+  --md-typeset-table-color: #4a2c94; /* Table border */
+
+  /* Admonitions */
+  --md-admonition-fg-color: var(--md-default-fg-color);
+  --md-admonition-bg-color: #160c33;
+
+  /* Custom variables */
+  --search-border-radius: 0.4em;
+}
+
+/* Override kbd foreground color */
+:root .md-typeset kbd {
+  color: #2e1b66;
+  font-weight: bold;
+}
+
+:root .admonition {
+  font-size: 1em;
+}
+
+/* Override titles color */
+:root h1,
+:root h2,
+:root h3,
+:root h4,
+:root h5,
+:root h6 {
+  color: #ffffff;
+}
+
+:root img {
+  color: #584394;
+  text-align: center;
+  font-size: 0.9em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Metadata at the bottom of a page */
+:root .md-source-file {
+  color: #584394;
+}
+
+/* Override code blocks */
+:root .md-typeset code {
+  border-radius: 0.4em;
+}
+
+
+/* Override search input */
+@media screen and (min-width: 60em) {
+  :root .md-search__form {
+    background-color: #2e1b66;
+    height: 1.8rem;
+    border-radius: var(--search-border-radius);
+  }
+}
+
+:root [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  border-radius: var(--search-border-radius) var(--search-border-radius) 0 0;
+}
+
+:root [dir="ltr"] .md-search__output, [dir="rtl"] .md-search__output {
+  border-bottom-right-radius: var(--search-border-radius);
+}
+
+:root [dir="ltr"] .md-search__output {
+  border-bottom-left-radius: var(--search-border-radius);
+}
+
+:root details.md-search-result__more:nth-child(2) {
+  background-color: var(--md-default-fg-color--lightest);
+  }
+
+/* Override search popup overlay */
+:root .md-search__overlay {
+  background-color: rgba(7, 0, 28, 0.85);
+  backdrop-filter: blur(4px);
+}

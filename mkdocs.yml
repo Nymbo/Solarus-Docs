@@ -1,0 +1,101 @@
+# Project information.
+site_name: Solarus Documentation
+site_author: Solarus Labs
+site_description: "Official documentation for the Solarus game engine: Lua API, tutorials and more."
+copyright: Copyright &copy; 2006 - 2022 Solarus Labs
+
+# Repository.
+repo_url: https://gitlab.com/solarus-games/solarus-website-docs
+repo_name: solarus-website-docs
+edit_uri: edit/master/docs/
+
+# Theme.
+theme:
+  name: material
+  font:
+    text: Inter
+    code: Fira Code
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.svg
+  features:
+    - navigation.tabs
+    - search.suggest
+extra_css:
+  - stylesheets/extra.css
+extra:
+  # homepage: https://docs.solarus-games.org
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.solarus-games.org
+      name: Solarus website
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/solarus-games
+      name: Source code on GitLab
+    - icon: fontawesome/brands/mastodon
+      link: https://mastodon.gamedev.place/@solarus
+      name: Mastodon
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/solarusgames
+      name: Twitter
+    - icon: fontawesome/brands/facebook-f
+      link: https://www.facebook.com/solarusgames
+      name: Facebook
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/r/solarus
+      name: Reddit
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/yYHjJHt
+      name: Discord
+
+# Plugins
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: date
+  - search
+
+# Page tree
+nav:
+  - Home: index.md
+  - Tutorials:
+    - Basics:
+      - Introduction: tutorials/basics/introduction.md
+      - Installation: tutorials/basics/installation.md
+      - Creating a quest: tutorials/basics/creating-a-quest.md
+      - Building a quest package: tutorials/basics/building-quest-package.md
+      - Choosing a license: tutorials/basics/choosing-a-license.md
+    - Quest Creation:
+      - Introduction: tutorials/quest-creation/introduction.md
+      - Map Editor: tutorials/quest-creation/map-editor.md
+    - Distribution:
+      - Introduction: tutorials/distribution/introduction.md
+      - Android: tutorials/distribution/android.md
+      - Nintendo Switch: tutorials/distribution/nintendo-switch.md
+    - Migration:
+      - Introduction: tutorials/migration/introduction.md
+      - From v1.0 to v1.1: tutorials/migration/from-v1-0-to-v1-1.md
+      - From v1.1 to v1.2: tutorials/migration/from-v1-1-to-v1-2.md
+      - From v1.2 to v1.3: tutorials/migration/from-v1-2-to-v1-3.md
+      - From v1.3 to v1.4: tutorials/migration/from-v1-3-to-v1-4.md
+      - From v1.4 to v1.5: tutorials/migration/from-v1-4-to-v1-5.md
+  - Lua API:
+    - Coming soon: lua-api/coming-soon.md
+  - Resources:
+    - Introduction: resources/introduction.md
+    - Scripts: resources/scripts.md
+    - Resource packs: resources/resource-packs.md
+    - Tools:
+      - Zeal: resources/tools/zeal.md
+      - ZeroBrane: resources/tools/zerobrane.md
+
+# Extensions.
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - admonition
+  - pymdownx.details
